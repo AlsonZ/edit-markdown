@@ -1,0 +1,10 @@
+.blue-centered-container {
+  background-color: lightblue;
+  display: grid;
+  place-content: center;
+}
+
+.default-container-sizing {
+  height: 300px;
+  width: 300px;
+}

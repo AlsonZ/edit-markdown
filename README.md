@@ -1,1 +1,3 @@
-# react-package-starter
+# Edit-Markdown
+
+Edit markdown with live preview
