@@ -1,0 +1,14 @@
+p {
+  margin: 0;
+}
+.em-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.em-editor-markdown-container {
+  padding: 10px;
+  color: var(--primary-text);
+  min-height: 90vh;
+}

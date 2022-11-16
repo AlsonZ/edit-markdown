@@ -3,7 +3,7 @@ import { Container } from "../../components/Container/Container";
 import "./Container.css";
 
 export default {
-  title: "Editor/GrowContainer",
+  title: "Parts/GrowContainer",
   component: Container,
   argTypes: {},
 };

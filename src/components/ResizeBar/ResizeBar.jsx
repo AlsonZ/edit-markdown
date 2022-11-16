@@ -1,26 +1,41 @@
 import PropTypes from "prop-types";
-import { Card } from "rixun-ui";
+import { Container } from "../Container";
 import React from "react";
+import "./ResizeBar.css";
 
-export const ResizeBar = ({ children, className, onMouseDown, lmTheme }) => {
+export const ResizeBar = ({
+  children,
+  className,
+  onMouseDown,
+  type,
+  width,
+  top,
+}) => {
   return (
-    <Card
-      className={`lm-resize-bar ${className}`}
-      type={lmTheme === "light" ? "shadow" : "border"}
-      extraProps={{
-        onMouseDown: onMouseDown,
-      }}
+    <Container
+      className={`em-resize-bar ${className}`}
+      type={type}
+      onMouseDown={onMouseDown}
+      width={width}
+      top={top}
     >
       {children}
-    </Card>
+    </Container>
   );
 };
 
 ResizeBar.displayName = "ResizeBar";
 
+ResizeBar.defaultProps = {
+  type: "sticky",
+  className: "",
+};
+
 ResizeBar.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   onMouseDown: PropTypes.func,
-  lmTheme: PropTypes.string,
+  type: PropTypes.string,
+  width: PropTypes.string,
+  top: PropTypes.string,
 };

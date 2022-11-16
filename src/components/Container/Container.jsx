@@ -3,7 +3,10 @@ import "./Container.css";
 import { forwardRef } from "react";
 
 export const Container = forwardRef(
-  ({ children, className, type, borderType, height, width, top }, ref) => {
+  (
+    { children, className, type, borderType, height, width, top, onMouseDown },
+    ref
+  ) => {
     return (
       <div
         style={{ width: width, height: height, top: top }}
@@ -14,6 +17,7 @@ export const Container = forwardRef(
           className
         }
         ref={ref}
+        onMouseDown={onMouseDown}
       >
         {children}
       </div>
@@ -37,6 +41,7 @@ Container.propTypes = {
   top: PropTypes.string,
   height: PropTypes.string,
   width: PropTypes.string,
+  onMouseDown: PropTypes.func,
 };
 
 export default Container;
